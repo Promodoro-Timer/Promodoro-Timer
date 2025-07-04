@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <div class="timer-container">
+    <h1 id="timer" onclick="toggleTimeInput()">25:00</h1>
+
+    <div id="time-controls" class="hidden">
+      <button onclick="adjustTime(1)">+1 min</button>
+      <button onclick="adjustTime(-1)">-1 min</button>
+    </div>
+
+    <div class="controls">
+      <button onclick="startTimer()">▶ Start</button>
+      <button onclick="pauseTimer()">⏸ Pause</button>
+      <button onclick="resetTimer()">🔁 Reset</button>
+    </div>
+
+    <p id="quote">"Knowledge is not what is memorized. Knowledge is what benefits." <br> — Ibn Taymiyyah</p>
+    <p>🧠 Sessions Completed: <span id="sessionCount">0</span></p>
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <audio id="alarmSound" src="https://freesound.org/data/previews/337/337049_3232194-lq.mp3"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
